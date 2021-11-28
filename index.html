@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>Amal Jellad</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet">
+   <script src="demo.js" type="text/javascript"></script>
+   <script src="sidebar.js" type="text/javascript"></script>
+   <link rel="icon" href="favicon.png" type="image/icon type">
+
+</head>
+
+<body>
+
+   <div id="logo"><img src="Logo.png" alt="" srcset=""></div>
+   <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <form id="connection-information-form">
+         <div class="menutitle">
+            <h3>Tmeprature connection</h1>
+         </div>
+         <div class="titles">Hostname or IP Address:</div>
+         <input id="host" type="text" name="host" value="test.mosquitto.org"><br>
+         <div class="titles">Port:</div>
+         <input id="port" type="text" name="port" value="8080"><br>
+         <div class="titles">Topic:</div>
+         <input id="topic" type="text" name="topic" value="#"><br><br>
+         <input class="button-connect" type="button" onclick="startConnect()" value="Connect">
+         <input class="button-disconnect" type="button" onclick="startDisconnect()" value="Disconnect">
+      </form>
+      <form id="connection-information-form2">
+         <div class="menutitle">
+            <h3>Humidity Connection</h1>
+         </div>
+         <div class="titles">Hostname or IP Address:</div>
+         <input id="host2" type="text" name="host" value="test.mosquitto.org"><br>
+         <div class="titles">Port:</div>
+         <input id="port2" type="text" name="port" value="8080"><br>
+         <div class="titles">Topic:</div>
+         <input id="topic2" type="text" name="topic" value="#"><br><br>
+         <input class="button-connect" type="button" onclick="startConnect2()" value="Connect">
+         <input class="button-disconnect" type="button" onclick="startDisconnect2()" value="Disconnect">
+      </form>
+   </div>
+   <div class="container">
+      <div class="tempcontainer">
+         <img src="tempholder.png" alt="tempholder">
+         <div id="messages">88</div>
+      </div>
+      <div id="afteropen">
+         <button class="button-1" onclick="openNav()" role="button">Connection Menu</button>
+      </div>
+      <div class="humcontainer">
+         <img src="humholder.png" alt="humidity holder">
+         <div id="messages2">66</div>
+      </div>
+   </div>
+   <h4>Connection Log</h4>
+   <textarea placeholder="Your awesome activity is tracked here" rows="20" name="comment[text]" id="comment_text"
+      cols="40" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list"
+      aria-haspopup="true"></textarea>
+</body>
+
+</html>
